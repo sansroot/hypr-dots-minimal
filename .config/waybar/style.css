@@ -1,0 +1,15 @@
+* {
+    font-family: "Monocraft" ;
+    font-weight: bold;
+    font-size: 12px;
+    padding: 0px 5px 0px 5px;
+    margin: 0px 0px 0px 0px;
+    color: #cfcfcf
+}
+
+window#waybar {
+    border-style: solid;
+    background-color: #1c1c1c;
+}
+
+
