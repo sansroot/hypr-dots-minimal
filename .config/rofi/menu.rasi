@@ -2,7 +2,7 @@
     width: 600;
     font: "Monocraft 14";
 }
-@import                          "./colors.rasi"
+@import                          ".cache/wal/colors-rofi-dark.rasi"
 element-text, element-icon, mode-switcher {
     background-color: inherit;
     text-color: inherit;
@@ -35,7 +35,7 @@ inputbar {
 
 prompt {
     enabled: false;
-    background-color: @selected;
+    background-color: @foreground;
     padding: 5px;
     text-color: @background;
     border-radius: 5px;
@@ -86,8 +86,8 @@ element-icon {
     font: @font;
 }
 
-element selected {
-    background-color: @selected;
+element foreground {
+    background-color: @foreground;
     border-radius: 15px;
     text-color: @background;
     font: @font;
