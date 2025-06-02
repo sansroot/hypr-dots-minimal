@@ -168,8 +168,8 @@ clear
 cp -r .config/* -t ~/.config/
 cp -r Documents/* -t ~/Documents/
 cp -r Pictures/* -t ~/Pictures/
-
-sudo cp -r ./cursor/hypr-dots* -t /usr/share/icons/
+sudo cp -r ./font/Monocraft* -t /usr/share/fonts/
+sudo cp -r ./cursor/* -t /usr/share/icons/
 sudo cp -r ./gtkthemes/* -t /usr/share/themes/
 cp -r ./.zshrc ./.p10k.zsh -t ~/
 swww init &> /dev/null
