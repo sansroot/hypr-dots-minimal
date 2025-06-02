@@ -178,8 +178,8 @@ swww img ~/.config/hypr/wallpaper.jpg &> /dev/null
 wal -i ~/.config/hypr/wallpaper.jpg &> /dev/null
 killall waybar &> /dev/null
 waybar &> /dev/null &
-cd ..
-rm -rf hypr-dots
+
+
 
 sudo chmod -R 777 /usr/share/themes
 sudo chmod -R 777 /usr/share/icons
@@ -188,9 +188,10 @@ gsettings set org.gnome.desktop.interface icon-theme 'Papirus-Dark' &> /dev/null
 gsettings set org.gnome.desktop.interface gtk-theme "hypr-dots-black" &> /dev/null
 gsettings set org.gnome.desktop.interface cursor-theme 'hypr-dots-anonymous' &> /dev/null
 hyprctl setcursor hypr-dots-anonymous 24
-
 clear
 echo "*****************************"
 echo "Thanks for using my rice! :)"
 echo "*****************************"
+cd ..
+rm -rf hypr-dots
 fi
