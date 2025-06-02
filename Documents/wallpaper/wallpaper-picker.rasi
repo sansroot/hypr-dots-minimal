@@ -84,3 +84,6 @@ element selected {
     text-color: @background;
     border-radius: 15px;
 }
+#element.selected.normal {
+    background-color: @selected-urgent-background;
+}
