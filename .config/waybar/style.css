@@ -1,16 +1,74 @@
-@import url("/home/ks/.cache/wal/colors-waybar.css"); /* ou remova o '~' se não funcionar */
+@import url("/home/ks/.cache/wal/colors-waybar.css");
 
-* {
+/* =======================
+   Barra Principal (transparente)
+   ======================= */
+window#waybar {
+    background-color: transparent;
+    border-style: solid;
     font-family: "Monocraft";
     font-weight: bold;
     font-size: 12px;
-    padding: 0px 5px;
-    margin: 0px;
     color: @color6;
-    border-color: transparent;
+    padding: 0;
+    margin: 0;
 }
 
-window#waybar {
-    border-style: solid;
+/* =======================
+   Módulos (com fundo)
+   ======================= */
+#workspaces,
+
+#clock,
+#battery,
+#network,
+#tray,
+#cpu,
+#memory,
+#disk,
+#language,
+#cava {
     background-color: @background;
+    border-radius: 30px;
+    margin: 7px 5px 0 5px;
+    padding: 0 10px;
+    color: @color6;
+}
+#workspaces button{
+    color: @color6;
+}
+
+#custom-launcher{
+    background-color: @background;
+    border-radius: 30px;
+    padding: 0 5px 0 8px;
+    margin: 7px 5px 0 5px;
+}
+#custom-power{
+    background-color: @background;
+    border-radius: 30px;
+    padding: 0 3px 0 9px;
+    margin: 7px 5px 0 5px;
+}
+#pulseaudio{
+    background-color: @background;
+    border-radius: 30px;
+    margin: 7px 0px 0px 0px;
+    padding: 0px 2px 0px 2px;
+}
+/* =======================
+   Ajustes adicionais (opcional)
+   ======================= */
+
+/* Ícones centralizados */
+#workspaces button {
+    padding: 0 8px;
+    background: transparent;
+    box-shadow: none;
+    border: none;
+}
+
+/* Espaçamento consistente entre módulos */
+window#waybar > * {
+    margin: 0 3px;
 }
