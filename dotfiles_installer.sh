@@ -108,7 +108,7 @@ if [ "$option" == "Y" ]; then
         read gaps_out
         sed -i "s/gaps_in = 10/gaps_in = $gaps_in/" .config/hypr/hyprland.conf
         sed -i "s/gaps_out = 40/gaps_out = $gaps_out/" .config/hypr/hyprland.conf
-
+    fi
     echo "would you like to set rounded corners? [Y/N]"
     read corners
     corners="${corners^^}"
