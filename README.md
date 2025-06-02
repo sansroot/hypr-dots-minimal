@@ -78,7 +78,7 @@ sudo pacman -S fastfetch imagemagick w3m
 #### Paste it in your terminal:
 ```
 git clone https://github.com/sansroot/hypr-dots-minimal
-cd hypr-dots
+cd hypr-dots-minimal
 sudo chmod -R 777 *
 bash ./dotfiles_installer.sh
 ```
