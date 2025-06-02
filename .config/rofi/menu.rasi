@@ -93,6 +93,7 @@ element foreground {
     font: @font;
 }
 #element.selected.normal {
-    background-color: @selected-urgent-background;
+    background-color: @selected-normal-background;
+    text-color: @background;
 }
 
