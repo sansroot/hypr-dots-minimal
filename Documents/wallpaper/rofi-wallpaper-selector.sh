@@ -22,4 +22,4 @@ WALLPAPER_PATH="$WALLPAPER_DIR/$SELECTED"
 cp "$WALLPAPER_PATH" "$HYPR_WALLPAPER"
 
 # Executa swww e wal com a cópia no diretório de config
-swww img "$HYPR_WALLPAPER" && wal -i "$HYPR_WALLPAPER"
+wal -i "$HYPR_WALLPAPER"
