@@ -2,10 +2,7 @@
 killall waybar &> /dev/null
 swww init &> /dev/null
 wal -i .config/hypr/wallpaper.jpg &> /dev/null
-lista=("mauve" "blue" "green" "lavender" "peach" "pink" "red" "sapphire" "yellow")
 clear
-usuario=$(whoami)
-sudo usermod -a -G input $usuario
 echo "Are you logged on Hyprland right now? [Y/N]"
 read hypr
 option="${hypr^^}"
