@@ -12,15 +12,12 @@ if [ "$option" == "Y" ]; then
     echo "type your main monitor, example [DP-1, HDMI-1]"
     read monitor
     sed -i "s/DP-1/$monitor/" .config/hypr/hyprland.conf &>/dev/null
-
     echo "type the refresh rate of your monitor, example [60, 140, 240]"
     read refresh
     sed -i "s/@240/@$refresh/" .config/hypr/hyprland.conf &>/dev/null
-
     echo "type the resolution of your monitor, example [1920x1080, 1280x720]"
     read resolution
     sed -i "s/1920x1080@$refresh/$resolution@$refresh/" .config/hypr/hyprland.conf &>/dev/null
-
     echo "Do you have a second monitor? [Y/N]"
     read hypr
     option="${hypr^^}"
@@ -29,15 +26,12 @@ if [ "$option" == "Y" ]; then
         echo "type your monitor, example [DP-2, HDMI-2]"
         read monitor
         sed -i "s/DP-2/$monitor/" .config/hypr/hyprland.conf &>/dev/null
-
         echo "type the refresh rate of your monitor, example [60, 140, 240]"
         read refresh
         sed -i "s/@144/@$refresh/" .config/hypr/hyprland.conf &>/dev/null
-
         echo "type the resolution of your monitor, example [1920x1080, 1280x720]"
         read resolution
         sed -i "s/1920x1080@$refresh/$resolution@$refresh/" .config/hypr/hyprland.conf &>/dev/null
-
         clear
         echo "is the second monitor on the left or on the right side on your main one? [L/R]"
         read hypr
@@ -54,7 +48,6 @@ if [ "$option" == "Y" ]; then
             echo "example: [1920, 1280]"
             read orientation
             sed -i "s/1920x0/-${orientation}x0/" .config/hypr/hyprland.conf &>/dev/null
-
         fi
         echo "Do you have a third monitor? [Y/N]"
         read hypr
@@ -64,38 +57,27 @@ if [ "$option" == "Y" ]; then
             echo "type your monitor, example [HDMI-2, HDMI-A-1]"
             read monitor
             sed -i "s/HDMI-A-1/$monitor/" .config/hypr/hyprland.conf &>/dev/null
-
             echo "type the refresh rate of your monitor, example [60, 140, 240]"
             read refresh
             sed -i "s/@60/@$refresh/" .config/hypr/hyprland.conf &>/dev/null
-
             echo "type the resolution of your monitor, example [1920x1080, 1280x720]"
             read resolution
             sed -i "s/1920x1080@$refresh/$resolution@$refresh/" .config/hypr/hyprland.conf &>/dev/null
-
             clear
             if [ "$option" == "R" ]; then
                 clear
                 sed -i "s/orientation/-${orientation}x0/" .config/hypr/hyprland.conf &>/dev/null
-
             else
                 clear
                 sed -i "s/orientation/${orientation}x0/" .config/hypr/hyprland.conf &>/dev/null
-
             fi
         else
             sed -i "s/monitor = HDMI-A-1, 1920x1080@60, orientation, 1//" .config/hypr/hyprland.conf &>/dev/null
-
         fi
     else
         sed -i "s/monitor = DP-2, 1920x1080@144, 1920x0, 1//" .config/hypr/hyprland.conf &>/dev/null
-
-
         sed -i "s/monitor = HDMI-A-1, 1920x1080@60, orientation, 1//" .config/hypr/hyprland.conf &>/dev/null
-
-
         sed -i "s/monitor:DP-2/monitor:$monitor/" .config/hypr/hyprland.conf &>/dev/null
-
     fi
     clear
     echo "would you like to set the gaps manually? [Y/N]"
@@ -144,11 +126,9 @@ if [ "$option" == "Y" ]; then
             read blur_passes
             sed -i "s/size = 1/size = $blur_size/" .config/hypr/hyprland.conf
             sed -i "s/passes = 5/passes = $blur_passes/" .config/hypr/hyprland.conf
-
         fi
     else
         sed -i "s/true, blur/false, blur/" .config/hypr/hyprland.conf
-
     fi
     clear
     echo "would you like to enable animations? [Y/N]"
@@ -156,7 +136,6 @@ if [ "$option" == "Y" ]; then
     animation="${animation^^}"
     if [ "$animation" = "N" ]; then
         sed -i "s/true, animations/false, animations/" .config/hypr/hyprland.conf
-
     fi
     clear
     echo "would you like to enable border glow? [Y/N]"
@@ -164,14 +143,11 @@ if [ "$option" == "Y" ]; then
     glow="${glow^^}"
     if [ "$glow" = "N" ]; then
         sed -i "s/true, glow/false, glow/" .config/hypr/hyprland.conf
-
 else
     echo "When you log on hyprland, run this script again to set you monitor and refresh rate"
     sleep 4
 fi
 clear
-
-
 cp -r .config/* -t ~/.config/
 cp -r Documents/* -t ~/Documents/
 cp -r Pictures/* -t ~/Pictures/
@@ -181,12 +157,8 @@ sudo cp -r ./gtkthemes/* -t /usr/share/themes/
 cp -r ./.zshrc ./.p10k.zsh -t ~/
 swww init &> /dev/null
 wal -i ~/.config/hypr/wallpaper.jpg &> /dev/null
-
 killall waybar &> /dev/null
 waybar &> /dev/null &
-
-
-
 sudo chmod -R 777 /usr/share/themes
 sudo chmod -R 777 /usr/share/icons
 sudo chmod -R 777 /usr/bin/papirus-folders
