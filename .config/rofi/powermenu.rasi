@@ -156,3 +156,6 @@ element foreground.normal {
     background-color:            var(foreground);
     text-color:                  var(background);
 }
+#element.selected.normal {
+    background-color: @selected-urgent-background;
+}
