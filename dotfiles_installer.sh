@@ -2,6 +2,8 @@
 killall waybar &> /dev/null
 swww init &> /dev/null
 wal -i .config/hypr/wallpaper.jpg &> /dev/null
+user=$(whoami)
+sed -i "s|/home/ks/.cache/wal/colors-waybar.css|/home/$user/.cache/wal/colors-waybar.css|" .config/waybar/style.css
 clear
 echo "Are you logged on Hyprland right now? [Y/N]"
 read hypr
