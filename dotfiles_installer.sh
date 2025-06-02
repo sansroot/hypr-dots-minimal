@@ -1,4 +1,5 @@
 #!/bin/bash
+killall waybar &> /dev/null
 swww init &> /dev/null
 wal -i .config/hypr/wallpaper.jpg &> /dev/null
 lista=("mauve" "blue" "green" "lavender" "peach" "pink" "red" "sapphire" "yellow")
@@ -156,7 +157,6 @@ sudo cp -r ./font/Monocraft* -t /usr/share/fonts/
 sudo cp -r ./cursor/* -t /usr/share/icons/
 sudo cp -r ./gtkthemes/* -t /usr/share/themes/
 cp -r ./.zshrc ./.p10k.zsh -t ~/
-
 killall waybar &> /dev/null
 waybar &> /dev/null &
 sudo chmod -R 777 /usr/share/themes
