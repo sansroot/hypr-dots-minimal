@@ -147,7 +147,7 @@ else
     sleep 4
 fi
 clear
-killall waybar &> /dev/null
+
 cp -r .config/* -t ~/.config/
 cp -r Documents/* -t ~/Documents/
 cp -r Pictures/* -t ~/Pictures/
@@ -158,14 +158,16 @@ cp -r ./.zshrc ./.p10k.zsh -t ~/
 sudo chmod -R 777 /usr/share/themes
 sudo chmod -R 777 /usr/share/icons
 sudo chmod -R 777 /usr/bin/papirus-folders
+wal -i ~/.config/hypr/wallpaper.jpg &> /dev/null
+killall waybar &> /dev/null
+waybar &> /dev/null &
 gsettings set org.gnome.desktop.interface icon-theme 'Papirus-Dark' &> /dev/null
 gsettings set org.gnome.desktop.interface gtk-theme "hypr-dots-black" &> /dev/null
 gsettings set org.gnome.desktop.interface cursor-theme 'hypr-dots-anonymous' &> /dev/null
 hyprctl setcursor hypr-dots-anonymous 24
 papirus-folders -C grey &> /dev/null
 swww init &> /dev/null
-waybar &> /dev/null &
-wal -i ~/.config/hypr/wallpaper.jpg &> /dev/null
+
 clear
 echo "*****************************"
 echo "Thanks for using my rice! :)"
