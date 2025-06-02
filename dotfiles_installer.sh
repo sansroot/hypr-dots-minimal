@@ -187,6 +187,7 @@ gsettings set org.gnome.desktop.interface icon-theme 'Papirus-Dark' &> /dev/null
 gsettings set org.gnome.desktop.interface gtk-theme "hypr-dots-black" &> /dev/null
 gsettings set org.gnome.desktop.interface cursor-theme 'hypr-dots-anonymous' &> /dev/null
 hyprctl setcursor hypr-dots-anonymous 24
+papirus-folders -C grey &> /dev/null
 clear
 echo "*****************************"
 echo "Thanks for using my rice! :)"
