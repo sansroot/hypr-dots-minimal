@@ -1,7 +1,6 @@
 #!/bin/bash
-
+wal -i .config/hypr/wallpaper.jpg &> /dev/null
 lista=("mauve" "blue" "green" "lavender" "peach" "pink" "red" "sapphire" "yellow")
-
 clear
 usuario=$(whoami)
 sudo usermod -a -G input $usuario
@@ -174,8 +173,8 @@ sudo cp -r ./cursor/hypr-dots* -t /usr/share/icons/
 sudo cp -r ./gtkthemes/* -t /usr/share/themes/
 cp -r ./.zshrc ./.p10k.zsh -t ~/
 swww init &> /dev/null
-swww img ~/.config/hypr/wallpaper.jpg &> /dev/null
-wal -i ~/.config/hypr/wallpaper.jpg &> /dev/null
+swww img ~/.config/hypr/wallpaper.jpg &> /dev/null && wal -i ~/.config/hypr/wallpaper.jpg &> /dev/null
+
 killall waybar &> /dev/null
 waybar &> /dev/null &
 
