@@ -151,8 +151,6 @@ sudo pacman -S keyd
 
 </details>
 
-![anonymous](https://github.com/user-attachments/assets/1f3d55be-19d0-419f-89bd-f915bd871bab)
-
 
 
 
