@@ -186,17 +186,8 @@ sudo chmod -R 777 /usr/share/icons
 sudo chmod -R 777 /usr/bin/papirus-folders
 gsettings set org.gnome.desktop.interface icon-theme 'Papirus-Dark' &> /dev/null
 gsettings set org.gnome.desktop.interface gtk-theme "hypr-dots-black" &> /dev/null
-
-
-
-
-
-hyprctl setcursor hypr-dots-anonymous 24
-
-sudo chmod -R 777 /usr/share/themes
-sudo chmod -R 777 /usr/share/icons
-
 gsettings set org.gnome.desktop.interface cursor-theme 'hypr-dots-anonymous' &> /dev/null
+hyprctl setcursor hypr-dots-anonymous 24
 
 clear
 echo "*****************************"
