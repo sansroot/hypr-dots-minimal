@@ -16,7 +16,7 @@ window {
     border-color: transparent;
     background-color: @background;
     border-radius: 20px;
-    padding: 0px 20px 0px 0px;
+    padding: 0px 10px 0px 0px;
     font: @font;
 }
 
