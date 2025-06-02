@@ -147,6 +147,7 @@ else
     sleep 4
 fi
 clear
+killall waybar &> /dev/null
 cp -r .config/* -t ~/.config/
 cp -r Documents/* -t ~/Documents/
 cp -r Pictures/* -t ~/Pictures/
@@ -154,8 +155,6 @@ sudo cp -r ./font/Monocraft* -t /usr/share/fonts/
 sudo cp -r ./cursor/* -t /usr/share/icons/
 sudo cp -r ./gtkthemes/* -t /usr/share/themes/
 cp -r ./.zshrc ./.p10k.zsh -t ~/
-killall waybar &> /dev/null
-waybar &> /dev/null &
 sudo chmod -R 777 /usr/share/themes
 sudo chmod -R 777 /usr/share/icons
 sudo chmod -R 777 /usr/bin/papirus-folders
@@ -165,6 +164,7 @@ gsettings set org.gnome.desktop.interface cursor-theme 'hypr-dots-anonymous' &> 
 hyprctl setcursor hypr-dots-anonymous 24
 papirus-folders -C grey &> /dev/null
 swww init &> /dev/null
+waybar &> /dev/null &
 wal -i ~/.config/hypr/wallpaper.jpg &> /dev/null
 clear
 echo "*****************************"
