@@ -53,6 +53,3 @@ window#waybar {
     box-shadow: none;
     border: none;
 }
-window#waybar > * {
-    margin: 0 3px;
-}
