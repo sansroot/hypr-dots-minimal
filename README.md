@@ -15,13 +15,9 @@ yay -S papirus-folders-catppuccin-git
 ```
 #### Waybar:
 ```
-sudo pacman -S iniparser
-yay -S waybar-cava fftw
+sudo pacman -S waybar
 ```
-#### Cava:
-```
-yay -S cava
-```
+
 #### Zsh: 
 ```
 sudo pacman -S zsh 
