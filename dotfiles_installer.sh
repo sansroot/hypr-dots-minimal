@@ -109,6 +109,13 @@ if [ "$option" == "Y" ]; then
         sed -i "s/gaps_in = 10/gaps_in = $gaps_in/" .config/hypr/hyprland.conf
         sed -i "s/gaps_out = 40/gaps_out = $gaps_out/" .config/hypr/hyprland.conf
 
+    echo "would you like to set rounded corners? [Y/N]"
+    read corners
+    corners="${corners^^}"
+    if [ "$corners" = "Y" ]; then
+        echo "type the rounded corners value (default 0): "
+        read rounded
+        sed -i "s/rounding = 0/rounding = $rounded/" .config/hypr/hyprland.conf
     fi
     clear
     echo "would you like to set a custom opacity? [Y/N]"
