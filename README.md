@@ -54,6 +54,10 @@ sudo pacman -S awesome-terminal-fonts otf-font-awesome ttf-font-awesome ttf-jetb
 ```
 sudo pacman -S fastfetch 
 ```
+#### Gnome polkit: 
+```
+sudo pacman -S polkit-gnome 
+```
 #### Oh-my-ZSH: 
 
 <a>https://github.com/ohmyzsh/ohmyzsh</a>
