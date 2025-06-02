@@ -19,7 +19,7 @@ window#waybar {
 #memory,
 #disk,
 #language,
-#cava {
+#backlight {
     background-color: @background;
     border-radius: 30px;
     margin: 7px 5px 0 5px;
