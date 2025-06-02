@@ -29,7 +29,6 @@ window#waybar {
 #workspaces button{
     color: @color6;
 }
-
 #custom-launcher{
     background-color: @background;
     border-radius: 30px;
