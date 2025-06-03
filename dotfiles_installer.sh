@@ -144,8 +144,7 @@ if [ "$option" == "Y" ]; then
     glow="${glow^^}"
     if [ "$glow" = "N" ]; then
         sed -i "s/true, glow/false, glow/" .config/hypr/hyprland.conf
-
-
+    fi
     echo "Would you like to use minimal bar in place of the island one? [Y/N]"
     read minimal
     minimal="${minimal^^}"
