@@ -23,7 +23,7 @@ window#waybar {
 #language,
 #backlight {
     background-color: @background;
-    color: @color6;
+    color: @foreground;
     margin: 0px 10px 0px 10px;
 }
 #workspaces button {
