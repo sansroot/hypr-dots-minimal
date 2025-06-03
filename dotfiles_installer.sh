@@ -156,7 +156,6 @@ else
     sleep 4
 fi
 clear
-
 cp -r .config/* -t ~/.config/
 cp -r Documents/* -t ~/Documents/
 cp -r Pictures/* -t ~/Pictures/
@@ -176,7 +175,6 @@ gsettings set org.gnome.desktop.interface cursor-theme 'hypr-dots-anonymous' &> 
 hyprctl setcursor hypr-dots-anonymous 24
 papirus-folders -C grey &> /dev/null
 swww init &> /dev/null
-
 clear
 echo "*****************************"
 echo "Thanks for using my rice! :)"
