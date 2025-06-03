@@ -144,6 +144,14 @@ if [ "$option" == "Y" ]; then
     glow="${glow^^}"
     if [ "$glow" = "N" ]; then
         sed -i "s/true, glow/false, glow/" .config/hypr/hyprland.conf
+
+
+    echo "Would you like to use minimal bar in place of the island one? [Y/N]"
+    read minimal
+    minimal="${minimal^^}"
+    if [ "$minimal" = "Y" ]; then
+        mv .config/waybar/style-m.css .config/waybar/style.css
+    fi
 else
     echo "When you log on hyprland, run this script again to set you monitor and refresh rate"
     sleep 4
