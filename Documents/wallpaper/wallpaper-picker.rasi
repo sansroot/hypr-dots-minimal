@@ -10,10 +10,9 @@ window {
     border-color: transparent;
     background-color: @background;
     border-radius: 20px;
-    padding: 10px 0 10px 30px;         /* zerado para evitar deslocamentos */
-    margin: 0;     /* centraliza horizontalmente a janela */
+    padding: 10px 0 10px 30px;         
+    margin: 0;     
     font: @font;
-
     layout: vertical;
     horizontal-align: 0.5;
     vertical-align: 0.5;
@@ -28,8 +27,8 @@ mainbox {
     layout: vertical;
     horizontal-align: 0.5;
     vertical-align: 0.5;
-    padding: 0;         /* remover padding extra */
-    margin: 0;          /* remover margin extra */
+    padding: 0;        
+    margin: 0;          
 }
 
 inputbar, prompt, entry, textbox-prompt-colon {
@@ -38,12 +37,12 @@ inputbar, prompt, entry, textbox-prompt-colon {
 
 listview {
     border: 0;
-    padding: 20px 0;     /* só padding vertical para espaçamento */
-    margin: 0;      /* centraliza a lista */
+    padding: 20px 0;     
+    margin: 0;      
     columns: 3;
-    lines: 4;
+    lines: 3;
     spacing: 20px;
-    fixed-height: false;
+    fixed-height: true;
     background-color: @background;
     layout: vertical;
     cycle: true;
