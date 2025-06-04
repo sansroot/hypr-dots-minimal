@@ -1,6 +1,6 @@
 #!/bin/bash
 killall waybar &> /dev/null
-swww-daemon &> /dev/null
+nohup swww-daemon > /dev/null 2>&1 &
 wal -i .config/hypr/wallpaper.jpg &> /dev/null
 user=$(whoami)
 sed -i "s|/home/ks/.cache/wal/colors-waybar.css|/home/$user/.cache/wal/colors-waybar.css|" .config/waybar/style.css
@@ -163,7 +163,7 @@ sudo cp -r ./font/Monocraft* -t /usr/share/fonts/
 sudo cp -r ./cursor/* -t /usr/share/icons/
 sudo cp -r ./gtkthemes/* -t /usr/share/themes/
 cp -r ./.zshrc ./.p10k.zsh -t ~/
-swww-daemon &> /dev/null
+nohup swww-daemon > /dev/null 2>&1 &
 sudo chmod -R 777 /usr/share/themes
 sudo chmod -R 777 /usr/share/icons
 sudo chmod -R 777 /usr/bin/papirus-folders
