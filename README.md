@@ -38,9 +38,9 @@ sudo pacman -S hyprlock
 ```
 sudo pacman -S swww 
 ```
-#### Kitty: 
+#### Alacritty: 
 ```
-sudo pacman -S kitty 
+sudo pacman -S alacritty
 ```
 #### Nerd-fonts and Awesome-fonts: 
 ```
