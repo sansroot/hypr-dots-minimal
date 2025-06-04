@@ -181,4 +181,3 @@ echo "Thanks for using my rice! :)"
 echo "*****************************"
 cd ..
 rm -rf hypr-dots-minimal
-fi
