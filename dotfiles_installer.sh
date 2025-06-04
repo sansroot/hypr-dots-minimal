@@ -1,6 +1,6 @@
 #!/bin/bash
 killall waybar &> /dev/null
-swww init &> /dev/null
+swww-daemon &> /dev/null
 wal -i .config/hypr/wallpaper.jpg &> /dev/null
 user=$(whoami)
 sed -i "s|/home/ks/.cache/wal/colors-waybar.css|/home/$user/.cache/wal/colors-waybar.css|" .config/waybar/style.css
@@ -163,6 +163,7 @@ sudo cp -r ./font/Monocraft* -t /usr/share/fonts/
 sudo cp -r ./cursor/* -t /usr/share/icons/
 sudo cp -r ./gtkthemes/* -t /usr/share/themes/
 cp -r ./.zshrc ./.p10k.zsh -t ~/
+swww-daemon &> /dev/null
 sudo chmod -R 777 /usr/share/themes
 sudo chmod -R 777 /usr/share/icons
 sudo chmod -R 777 /usr/bin/papirus-folders
@@ -174,7 +175,6 @@ gsettings set org.gnome.desktop.interface gtk-theme "hypr-dots-black" &> /dev/nu
 gsettings set org.gnome.desktop.interface cursor-theme 'hypr-dots-anonymous' &> /dev/null
 hyprctl setcursor hypr-dots-anonymous 24
 papirus-folders -C grey &> /dev/null
-swww init &> /dev/null
 clear
 echo "*****************************"
 echo "Thanks for using my rice! :)"
