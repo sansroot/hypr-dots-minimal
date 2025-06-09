@@ -7,7 +7,7 @@ HYPR_WALLPAPER="$HYPR_CONFIG_DIR/wallpaper.jpg"
 
 SELECTED=$(for a in "$WALLPAPER_DIR"/*.jpg; do
     echo -en "$(basename "$a")\0icon\x1f$a\n"
-done | rofi -dmenu -theme ~/Documents/wallpaper/wallpaper-picker.rasi -p "Escolha o wallpaper")
+done | rofi -dmenu -theme ~/Documents/wallpaper/wallpaper-picker.rasi)
 
 [ -z "$SELECTED" ] && exit 0
 
