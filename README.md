@@ -34,6 +34,10 @@ yay -S hyprshot
 ```
 sudo pacman -S hyprlock 
 ```
+#### Hyprpicker: 
+```
+sudo pacman -S hyprpicker 
+```
 #### Swww: 
 ```
 sudo pacman -S swww 
