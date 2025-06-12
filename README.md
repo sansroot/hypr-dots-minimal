@@ -48,7 +48,7 @@ sudo pacman -S alacritty
 ```
 #### Nerd-fonts and Awesome-fonts: 
 ```
-sudo pacman -S awesome-terminal-fonts otf-font-awesome ttf-font-awesome
+sudo pacman -S awesome-terminal-fonts otf-font-awesome ttf-font-awesome nerd-fonts
 ```
 #### Fastfetch: 
 ```
